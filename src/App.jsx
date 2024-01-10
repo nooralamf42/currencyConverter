@@ -5,8 +5,8 @@ import {InputBox} from './components'
 function App() {
     const [fromCurrency, setFromCurrency] = useState('inr')
     const [toCurrency, setToCurrency] = useState('usd')
-    const [amount, setAmount] = useState(0)
-    const [convertedAmount, setConvertedAmount] = useState(0)
+    const [amount, setAmount] = useState(null)
+    const [convertedAmount, setConvertedAmount] = useState(null)
 
     const currencyData = useCurrencyInfo(fromCurrency)
     const options = Object.keys(currencyData)
@@ -27,7 +27,7 @@ function App() {
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat bg-[url('./bg.jpg')] "
         >
             <div className="w-full">
-                <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+                <div className="max-w-[80%] md:max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();

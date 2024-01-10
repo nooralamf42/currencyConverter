@@ -25,7 +25,7 @@ function InputBox({
                     type="number"
                     placeholder="Amount"
                     value={amount}
-                    onInput={(e)=>onAmountChange && onAmountChange(Number(e.target.value))}
+                    onChange={(e)=>onAmountChange && onAmountChange(Number(e.target.value))}
                     disabled={disabledAmount}
                     id={labelID}
                 />
